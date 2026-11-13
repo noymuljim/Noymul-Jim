@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "portfolio-blue-green-mix";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #F8FAFC;
+  --color-base-200: #F1F5F9;
+  --color-base-300: #E2E8F0;
+  --color-base-content: #0F1F2C;
+
+  --color-primary: #0D9488;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #2563EB;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #9333EA;
+  --color-accent-content: #FFFFFF;
+
+  --color-neutral: #0F172A;
+  --color-neutral-content: #F8FAFC;
+
+  --color-info: #2563EB;
+  --color-info-content: #FFFFFF;
+  --color-success: #0D9488;
+  --color-success-content: #FFFFFF;
+  --color-warning: #D97706;
+  --color-warning-content: #FFFFFF;
+  --color-error: #DC2626;
+  --color-error-content: #FFFFFF;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* ---------- Animated gradient: light gray → pastel blue → pastel purple → white ---------- */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blobFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(6vw, -4vh) scale(1.15); }
+  66%  { transform: translate(-5vw, 5vh) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  min-height: 100vh;
+  color: #0F1F2C;
+
+  background-color: #F3F4F6;
+  background-image: linear-gradient(
+    120deg,
+    #F3F4F6 0%,   /* light gray */
+    #EFF6FF 18%,  /* very light blue */
+    #E0EDFF 32%,  /* pastel blue */
+    #F3EEFF 50%,  /* very light purple */
+    #E9E3FF 62%,  /* pastel purple */
+    #F0FDF9 78%,  /* faint green hint */
+    #FFFFFF 90%,  /* white */
+    #F3F4F6 100%  /* light gray, loops clean */
+  );
+  background-size: 300% 300%;
+  background-attachment: fixed;
+  animation: gradientShift 24s ease-in-out infinite;
+}
+
+/* Floating blobs: soft pastel */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(42vw 42vw at 85% 25%, rgba(147, 197, 253, 0.28), transparent 70%),  /* blue */
+    radial-gradient(40vw 40vw at 15% 30%, rgba(196, 181, 253, 0.26), transparent 70%),  /* purple */
+    radial-gradient(36vw 36vw at 70% 85%, rgba(165, 180, 252, 0.22), transparent 70%),  /* indigo bridge */
+    radial-gradient(26vw 26vw at 10% 90%, rgba(110, 231, 183, 0.10), transparent 70%),  /* green, faint */
+    radial-gradient(34vw 34vw at 50% 55%, rgba(255, 255, 255, 0.55), transparent 70%);  /* white */
+  filter: blur(40px);
+  animation: blobFloat 28s ease-in-out infinite;
+}
+
+/* ---------- Hero video fade into page ---------- */
+.hero-fade {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 45%, rgba(0,0,0,0.5) 75%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0%, #000 45%, rgba(0,0,0,0.5) 75%, transparent 100%);
+}
+
+.after-hero {
+  margin-top: -8rem;
+  padding-top: 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Section bands: all light pastel ---------- */
+.band-light {
+  background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.45) 20%, rgba(255,255,255,0.45) 100%);
+}
+.band-grey {
+  background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(243,244,246,0.70) 100%);
+}
+.band-blue {
+  background: linear-gradient(180deg, rgba(243,244,246,0.70) 0%, rgba(191,219,254,0.35) 100%);
+}
+.band-purple {
+  background: linear-gradient(180deg, rgba(191,219,254,0.35) 0%, rgba(221,214,254,0.40) 100%);
+}
+.band-dark {
+  background: linear-gradient(180deg, rgba(221,214,254,0.40) 0%, #312E81 55%, #1E1B4B 100%);
+  color: #F8FAFC;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body::before { animation: none; }
+  html { scroll-behavior: auto; }
+}
