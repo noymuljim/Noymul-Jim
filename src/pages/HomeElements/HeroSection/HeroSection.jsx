@@ -37,7 +37,7 @@ const HeroSection = () => {
 
         {/* Title */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
-          Hello, i am
+          Hello, <span className="italic text-purple-300 font-normal">i am</span>
         </h1>
         <h1 className="text-3xl sm:text-6xl lg:text-6xl font-bold tracking-tight text-white mb-6">
           Noymul Matin Jim

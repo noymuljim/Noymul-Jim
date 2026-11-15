@@ -17,7 +17,7 @@ const Workflow = () => {
       <div className="mb-12 text-center sm:text-left">
      
         <h2 className="text-3xl sm:text-5xl font-bold mt-3 text-black text-center">
-        My Work flow
+        My work flow
         </h2>
         <p className="mt-2 text-sm sm:text-base text-center text-gray-500">
            From understanding of business goal to a production ready application.

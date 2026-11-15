@@ -43,7 +43,7 @@ const UiUxCaseStudy = () => {
                 <h2 className="text-3xl sm:text-5xl font-bold mt-3 text-black">
                     UI/UX Case Study
                 </h2>
-                <p className="text-gray-500 text-base md:text-lg leading-relaxed">
+                <p className="mt-2 text-sm sm:text-base text-center text-gray-500">
                     Designed intuitive marketplace experiences with a focus on seamless product discovery, <br></br> user-friendly navigation, and smooth interactions.
                 </p>
             </div>
