@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router";
 import Logo from "../../component/Logo";
 import { MdCloudDownload } from "react-icons/md";
 const RESUME_URL =
-    "https://drive.google.com/uc?export=download&id=1hzDus4qWMGDvby_fR8u5J5_oXFwu3EVZ";
+    "https://drive.google.com/uc?export=download&id=15K5xmByZwYANn0Ib31k_GgFWj1QnU8Dl";
 const NAV_ITEMS = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
