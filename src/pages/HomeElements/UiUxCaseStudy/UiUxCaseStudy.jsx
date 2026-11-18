@@ -36,7 +36,7 @@ const caseStudies = [
 
 const UiUxCaseStudy = () => {
     return (
-        <section className="py-16 px-4 max-w-7xl mx-auto">
+        <section id="caseStudy" className="scroll-mt-24 py-16 px-4 max-w-7xl mx-auto">
             {/* Header Section */}
             <div className="text-center max-w-3xl mx-auto mb-14">
 
@@ -73,7 +73,7 @@ const UiUxCaseStudy = () => {
                         {/* Content Body */}
                         <div className="p-6 flex-1 flex flex-col justify-between">
                             <div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-400 transition-colors">
+                                <h3 className="text-xl font-bold text-gray-900 mb-2 transition-colors">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-500 text-sm leading-relaxed mb-6">
@@ -111,15 +111,12 @@ const UiUxCaseStudy = () => {
 
             {/* Bottom Call to Action */}
             <div className="mt-14 text-center">
-
-
                 <a
                     href="https://www.behance.net/noymuljim"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-fit mx-auto  btn group rounded-full bg-gray-800 text-white hover:bg-gray-200 hover:text-black hover:shadow-black px-10 py-7  flex justify-center items-center gap-2  font-semibold text-sm py-3.5  duration-200"
                 >
-
                     View More
                     <FaLocationArrow className="text-white group-hover:text-black transition-colors" />
                 </a>

@@ -3,11 +3,11 @@ import me from "../../../assets/jim.png";
 const About = () => {
     return (
         // Full-width band. Inner div holds the max-width.
-        <section id="about" className="after-hero  scroll-mt-24">
+        <section id="about" className="after-hero  scroll-mt-9">
             <div className="pb-20 px-6 max-w-7xl mx-auto text-slate-800">
                 <div className="text-center mb-14">
                     <h2 className="text-3xl sm:text-5xl font-bold mt-3 text-black">
-                        A Little About Me
+                      About Me
                     </h2>
                 </div>
 

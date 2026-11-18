@@ -109,6 +109,11 @@ const QuickparkDetails = () => {
       value: "Firebase & Vercel",
       icon: <FiCloud />,
     },
+    {
+      label: "Roles",
+      value: "Admin, User & Partner",
+      icon: <FiUsers />,
+    },
   ];
 
   return (

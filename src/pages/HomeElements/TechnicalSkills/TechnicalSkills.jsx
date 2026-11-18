@@ -10,9 +10,13 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaGithub,
+  FaInfinity,
 } from "react-icons/fa";
-import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiVercel } from "react-icons/si";
+import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiVercel, SiSwiper, SiPostman, SiNetlify } from "react-icons/si";
 import { MdApi } from "react-icons/md";
+import { BsCircle, BsStripe } from "react-icons/bs";
+import { TbBrandNpm } from "react-icons/tb";
+import { RxStitchesLogo } from "react-icons/rx";
 
 /* color = brand color. null = theme text color (for black logos). */
 const technicalSkills = [
@@ -23,16 +27,20 @@ const technicalSkills = [
       { name: "UI/UX", icon: FaPencilRuler, color: "#A259FF" },
       { name: "Wireframing", icon: FaThLarge, color: "#0ACF83" },
       { name: "Prototyping", icon: FaLayerGroup, color: "#1ABCFE" },
+      { name: "Stitch", icon: RxStitchesLogo, color: "#1ABCFE" },
     ],
   },
   {
     category: "Frontend",
     skills: [
-      { name: "HTML", icon: FaHtml5, color: "#E34F26" },
-      { name: "CSS", icon: FaCss3Alt, color: "#1572B6" },
-      { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
-      { name: "React", icon: FaReact, color: "#61DAFB" },
-      { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
+      { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
+      { name: "JavaScript ES6", icon: FaJs, color: "#F7DF1E" },
+      { name: "React.js", icon: FaReact, color: "#61DAFB" },
+      { name: "Tailwind css", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Swiper", icon: SiSwiper, color: "#6333F6" },
+      { name: "Marqee", icon: FaInfinity, color: "#FF5733" },
+      { name: "SweetAlert2", icon: BsCircle, color: "#E2AC93" },
     ],
   },
   {
@@ -41,6 +49,7 @@ const technicalSkills = [
       { name: "Node.js", icon: FaNodeJs, color: "#5FA04E" },
       { name: "Express.js", icon: SiExpress, color: null },
       { name: "REST APIs", icon: MdApi, color: "#FF6C37" },
+      { name: "Stripe", icon: BsStripe, color: "#635BFF" },
     ],
   },
   {
@@ -56,6 +65,9 @@ const technicalSkills = [
       { name: "Git", icon: FaGitAlt, color: "#F05032" },
       { name: "GitHub", icon: FaGithub, color: null },
       { name: "Vercel", icon: SiVercel, color: null },
+      { name: "Netlify", icon: SiNetlify, color: null },
+      { name: "NPM", icon: TbBrandNpm, color: "#FFCA28" },
+      { name: "Postman", icon: SiPostman, color: "#F05032" },
     ],
   },
 ];
@@ -75,7 +87,7 @@ const Skill = ({ name, icon: Icon, color }) => (
 
 const TechnicalSkills = () => {
   return (
-    <section className="relative mx-auto w-full max-w-5xl px-4 py-16">
+    <section id="skills" className="relative mx-auto w-full max-w-5xl px-4 py-16">
       {/* Section Header */}
       <div className="mb-12 text-center sm:text-left">
        

@@ -20,14 +20,13 @@ const Quickpark = () => {
     ];
 
     return (
-        <section id="projects" className="my-2 pt-10 px-4 max-w-7xl mx-auto scroll-mt-24">
+        <section id="projects" className="my-2 pt-10 px-4 max-w-7xl mx-auto scroll-mt-44">
 
 
             {/* Main Project Card */}
             <div className="bg-white rounded-2xl border border-transparent hover:border-purple-400 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12 transition-all duration-300">
 
-                {/* Left: Full-Bleed Image Preview (5 cols) */}
-                {/* Left: Full Uncropped Image in Browser Showcase (5 cols) */}
+             
                 <div className="lg:col-span-5 relative bg-gradient-to-br from-black via-white-300 to-gray-350 p-5 sm:p-6 flex flex-col justify-between group">
 
                     {/* Top Floating Badges */}
@@ -51,9 +50,7 @@ const Quickpark = () => {
                             <span className="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
                             <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
                             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                            <span className="ml-2 text-[10px] font-mono text-slate-400 truncate">
-                                easypark.app
-                            </span>
+                           
                         </div>
 
                         {/* Full Uncropped Image */}

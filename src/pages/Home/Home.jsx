@@ -3,6 +3,7 @@ import Contact from "../HomeElements/Contact/Contact";
 import Education from "../HomeElements/Education/Education";
 import FeaturedProjects from "../HomeElements/FeaturedProjects/FeaturedProjects";
 import HeroSection from "../HomeElements/HeroSection/HeroSection";
+import MyService from "../HomeElements/MyService/MyService";
 import TechnicalSkills from "../HomeElements/TechnicalSkills/TechnicalSkills";
 import Workflow from "../HomeElements/TechnicalSkills/WorkFlow";
 import UiUxCaseStudy from "../HomeElements/UiUxCaseStudy/UiUxCaseStudy";
@@ -23,6 +24,7 @@ const Home = () => {
             <UiUxCaseStudy></UiUxCaseStudy>
              <Workflow></Workflow>
             <Education></Education>
+            <MyService></MyService>
            
            
           </div>

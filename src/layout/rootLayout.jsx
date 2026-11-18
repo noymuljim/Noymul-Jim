@@ -4,9 +4,11 @@ import Navbar from "../pages/shared/navbar";
 const rootLayout = () => {
     return (
         <div>
+            
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
+            
         </div>
     );
 };

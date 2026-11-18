@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router"; 
+import { useLocation, useNavigate } from "react-router";
 import Logo from "../../component/Logo";
 import { MdCloudDownload } from "react-icons/md";
-
+const RESUME_URL =
+    "https://drive.google.com/uc?export=download&id=1hzDus4qWMGDvby_fR8u5J5_oXFwu3EVZ";
 const NAV_ITEMS = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
+    { id: "caseStudy", label: "Case-study" },
     { id: "education", label: "Education" },
+
     { id: "contact", label: "Contact" },
 ];
 
@@ -69,11 +73,10 @@ const Navbar = () => {
                     key={id}
                     href={`/#${id}`}
                     onClick={(e) => handleClick(e, id)}
-                    className={`flex items-center gap-2 rounded-full px-5 py-2 text-sm transition-all duration-300 ${
-                        location.pathname === "/" && active === id
-                            ? "bg-white/60 text-black font-semibold shadow-sm"
-                            : "text-black hover:bg-white/40"
-                    }`}
+                    className={`flex items-center gap-2 rounded-full px-5 py-2 text-sm transition-all duration-300 ${location.pathname === "/" && active === id
+                        ? "bg-purple-200 text-black font-semibold shadow-sm"
+                        : "text-black hover:bg-white/40"
+                        }`}
                 >
                     {label}
                 </a>
@@ -118,7 +121,13 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end">
-                    <a className="btn group rounded-full bg-gray-800 text-white hover:bg-gray-200 hover:text-black hover:shadow-black px-6">
+                    <a
+                        href={RESUME_URL}
+                        download="Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn group rounded-full bg-gray-800 text-white hover:bg-gray-200 hover:text-black hover:shadow-black px-6"
+                    >
                         <MdCloudDownload className="text-white group-hover:text-black transition-colors" />
                         Resume
                     </a>
@@ -128,3 +137,4 @@ const Navbar = () => {
     );
 };
 export default Navbar;
+
